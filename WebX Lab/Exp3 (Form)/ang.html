@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Project</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="helloWorldApp">
+    <div ng-controller="HelloWorldController">
+        <input type="text" ng-model="name" placeholder="Enter your name">
+        <p>Hello, {{name}}!</p>
+    </div>
+
+    <script>
+        var app = angular.module('helloWorldApp', []);
+        app.controller('HelloWorldController', function($scope) {
+            $scope.name = 'World';
+        });
+    </script>
+</body>
+</html>
